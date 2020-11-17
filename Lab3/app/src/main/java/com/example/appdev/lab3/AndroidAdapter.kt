@@ -13,20 +13,19 @@ import androidx.core.view.drawToBitmap
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.recycler_view_layout.view.*
 import org.w3c.dom.Text
+import ru.itmo.androidversions.data.Android
 
-class AndroidAdapter (private val context: Context, private val android: List<Android>): RecyclerView.Adapter<AndroidAdapter.ViewHolder>() {
+class AndroidAdapter(private val context: Context, private val android: List<Android>) :
+    RecyclerView.Adapter<AndroidAdapter.ViewHolder>() {
 
 
-
-
-    private fun getContext():Context{
+    private fun getContext(): Context {
         return context
     }
 
 
-
-
-    class MyImlInterface(private val context: Context, private val viewId:Int ): View.OnClickListener {
+    class MyImlInterface(private val context: Context, private val viewId: Int) :
+        View.OnClickListener {
 
 
         override fun onClick(p0: View?) {
@@ -40,7 +39,6 @@ class AndroidAdapter (private val context: Context, private val android: List<An
 
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
-
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -59,7 +57,7 @@ class AndroidAdapter (private val context: Context, private val android: List<An
     private fun getItem(position: Int): Android = android[position]
 
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val image: ImageView = itemView.findViewById(R.id.image)
         private val title: TextView = itemView.findViewById(R.id.name_in_page)
 

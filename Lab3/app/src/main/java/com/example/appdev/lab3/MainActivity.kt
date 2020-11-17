@@ -6,6 +6,7 @@ import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
+import ru.itmo.androidversions.data.DataStorage
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         decoration.setDrawable(ContextCompat.getDrawable(this, R.color.colorPrimaryDark)!!)
         list.addItemDecoration(decoration)
     }
-
 
 
 }
